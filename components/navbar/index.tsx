@@ -20,15 +20,14 @@ const Navbar = ({
       <div className={styles.content}>
         <div className={styles.sub}>
           <div className={styles.nav}>
-            <div className={styles.logo}>
-              <Image
-                src="/tmdb-short.svg"
-                alt="TMDB logo"
-                height="100%"
-                width="100%"
-                className={styles.image}
-              />
-            </div>
+            <Image
+              src="/tmdb-short.svg"
+              alt="TMDB logo"
+              height="100%"
+              width="80%"
+              layout="fixed"
+              className={styles.image}
+            />
             <ul>
               <li className={router.pathname === '/' ? styles.active : ''}>
                 <Link href="/">Movies</Link>
