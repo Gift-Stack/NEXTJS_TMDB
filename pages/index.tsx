@@ -49,6 +49,37 @@ const Home: NextPage = ({
     localStorage.setItem('movies', JSON.stringify(movies))
   }, [movies])
 
+  const handleSort = (direction: string) => {
+    if (direction === 'sort') setFilteredMovies([...movies])
+    if (direction === 'asc') {
+      setFilteredMovies(
+        movies.sort((a, b) => {
+          if (a.title < b.title) {
+            return -1
+          }
+          if (a.title > b.title) {
+            return 1
+          }
+          return 0
+        })
+      )
+    }
+
+    if (direction === 'desc') {
+      setFilteredMovies(
+        movies.sort((a, b) => {
+          if (a.title < b.title) {
+            return 1
+          }
+          if (a.title > b.title) {
+            return -1
+          }
+          return 0
+        })
+      )
+    }
+  }
+
   const handleFilter = (e: React.FormEvent<HTMLInputElement>) => {
     setFilterValue(e.currentTarget.value)
     setFilteredMovies(
@@ -66,7 +97,7 @@ const Home: NextPage = ({
   }
 
   return (
-    <Layout search={search} setSearch={setSearch}>
+    <Layout search={search} setSearch={setSearch} handleSort={handleSort}>
       <div>
         {search && (
           <div

@@ -28,9 +28,7 @@
   width: 100%;
   padding: 0 40px;
 }
-// .image {
 
-// }
 .nav {
   display: flex;
   justify-content: flex-start;
@@ -86,6 +84,8 @@
     list-style: none;
     transition: all 0.3s ease-in-out;
     transition-delay: 0.3s;
+    display: flex;
+    gap: 5px;
     li {
       display: flex;
       flex-direction: column;

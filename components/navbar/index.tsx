@@ -7,10 +7,12 @@ import { FaTimes } from 'react-icons/fa'
 
 const Navbar = ({
   search,
-  setSearch
+  setSearch,
+  handleSort
 }: {
   search: boolean | undefined
   setSearch?: (arg: boolean) => void
+  handleSort?: (arg: string) => void
 }) => {
   const router = useRouter()
   return (
@@ -42,6 +44,13 @@ const Navbar = ({
           </div>
           <div className={styles.flex}>
             <ul>
+              <select
+                onChange={(e) => handleSort && handleSort(e.target.value)}
+              >
+                <option defaultValue="sort">Sort</option>
+                <option value="asc">Asc</option>
+                <option value="desc">Desc</option>
+              </select>
               <li onClick={() => setSearch && setSearch(!search)}>
                 {search ? <FaTimes color="#fff" /> : <BiSearch color="#fff" />}
               </li>

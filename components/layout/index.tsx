@@ -8,6 +8,7 @@ interface LayoutProps {
   description: string
   search?: boolean
   setSearch?: (arg: boolean) => void
+  handleSort?: (arg: string) => void
   children: ReactNode
 }
 export const Layout = ({
@@ -16,6 +17,7 @@ export const Layout = ({
   description,
   search,
   setSearch,
+  handleSort,
   children
 }: LayoutProps) => {
   return (
@@ -26,7 +28,7 @@ export const Layout = ({
         <meta name="keywords" content={keywords} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar search={search} setSearch={setSearch} />
+      <Navbar search={search} setSearch={setSearch} handleSort={handleSort} />
       {children}
     </div>
   )
