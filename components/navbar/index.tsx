@@ -47,7 +47,7 @@ const Navbar = ({
               <select
                 onChange={(e) => handleSort && handleSort(e.target.value)}
               >
-                <option defaultValue="sort">Sort</option>
+                <option value="sort">Sort</option>
                 <option value="asc">Asc</option>
                 <option value="desc">Desc</option>
               </select>

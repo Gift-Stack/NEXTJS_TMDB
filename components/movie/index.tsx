@@ -32,14 +32,18 @@ const Movie = ({ movie_data, handleHighlight }: MovieProp) => {
 
   return (
     <div className={styles.root}>
-      <Image
-        src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-        alt="Movies Poster"
-        width={180}
-        height={250}
-        // layout="fill"
-        className={styles.movie}
-      />
+      <>
+        <Image
+          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+          alt="Movies Poster"
+          width={180}
+          height={250}
+          // layout="fill"
+          sizes="100vw"
+          // placeholder="blur"
+          className={styles.movie}
+        />
+      </>
       <div className={styles.star} onClick={handleAddHighlight}>
         <AiFillStar
           style={{
@@ -61,7 +65,7 @@ const Movie = ({ movie_data, handleHighlight }: MovieProp) => {
             width: 40,
             height: 40,
             position: 'absolute',
-            bottom: 35,
+            bottom: -15,
             left: 10,
             color: '#fff'
           },

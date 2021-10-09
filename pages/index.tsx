@@ -50,7 +50,7 @@ const Home: NextPage = ({
   }, [movies])
 
   const handleSort = (direction: string) => {
-    if (direction === 'sort') setFilteredMovies([...movies])
+    if (direction === 'sort') setFilteredMovies(movies)
     if (direction === 'asc') {
       setFilteredMovies(
         movies.sort((a, b) => {
@@ -64,7 +64,6 @@ const Home: NextPage = ({
         })
       )
     }
-
     if (direction === 'desc') {
       setFilteredMovies(
         movies.sort((a, b) => {
