@@ -9,8 +9,8 @@ const Navbar = ({
   search,
   setSearch
 }: {
-  search: boolean
-  setSearch(arg: boolean): void
+  search: boolean | undefined
+  setSearch?: (arg: boolean) => void
 }) => {
   const router = useRouter()
   return (
@@ -41,7 +41,7 @@ const Navbar = ({
           </div>
           <div className={styles.flex}>
             <ul>
-              <li onClick={() => setSearch(!search)}>
+              <li onClick={() => setSearch && setSearch(!search)}>
                 {search ? <FaTimes color="#fff" /> : <BiSearch color="#fff" />}
               </li>
             </ul>

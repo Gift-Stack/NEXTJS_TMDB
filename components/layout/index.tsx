@@ -6,8 +6,8 @@ interface LayoutProps {
   title: string
   keywords: string
   description: string
-  search: boolean
-  setSearch(arg: boolean): void
+  search?: boolean
+  setSearch?: (arg: boolean) => void
   children: ReactNode
 }
 export const Layout = ({
