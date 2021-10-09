@@ -46,12 +46,8 @@ const Home: NextPage = ({
   }, [results])
 
   useEffect(() => {
-    console.log(movies)
     localStorage.setItem('movies', JSON.stringify(movies))
   }, [movies])
-
-  // // eslint-disable-next-line
-  // useEffect(() => console.log(filteredMovies), [movies])
 
   const handleFilter = (e: React.FormEvent<HTMLInputElement>) => {
     setFilterValue(e.currentTarget.value)
@@ -66,7 +62,7 @@ const Home: NextPage = ({
     movie = { ...movie, highlight: stared }
     const allMovies = movies
     allMovies.splice(index, 1, movie)
-    setMovies(allMovies)
+    setMovies([...allMovies])
   }
 
   return (
@@ -77,6 +73,7 @@ const Home: NextPage = ({
             style={{
               background: '#000',
               marginTop: 64,
+              marginBottom: '-4rem',
               transition: 'all 0.5s ease-in-out'
             }}
           >

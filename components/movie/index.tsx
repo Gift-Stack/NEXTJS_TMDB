@@ -30,11 +30,12 @@ const Movie = ({ movie_data, handleHighlight }: MovieProp) => {
     setStared(!stared)
   }
   return (
-    <div style={{ position: 'relative', width: 180, height: 300 }}>
+    <div className={styles.root}>
       <Image
         src={`https://image.tmdb.org/t/p/w500${poster_path}`}
         alt="Movies Poster"
         width={180}
+        // width="100%"
         height={250}
         className={styles.movie}
       />

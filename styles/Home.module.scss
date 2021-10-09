@@ -9,7 +9,7 @@
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 6rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,6 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  /* max-width: 1150px; */
   column-gap: 20px;
   row-gap: 40px;
 }
@@ -99,9 +98,9 @@
     outline: none;
   }
 }
-/* @media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-} */
+// @media (max-width: 400px) {
+//   .grid {
+//     width: 100%;
+//     flex-direction: column;
+//   }
+// }

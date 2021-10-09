@@ -28,13 +28,16 @@
   width: 100%;
   padding: 0 40px;
 }
+// .image {
+
+// }
 .nav {
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
   overflow: visible;
-  gap: 20px;
+  gap: clamp(20px, 700px, 0px);
   ul {
     color: #fff;
     font-weight: 600;
@@ -73,6 +76,7 @@
     }
   }
 }
+
 .flex {
   display: flex;
   flex-wrap: nowrap;

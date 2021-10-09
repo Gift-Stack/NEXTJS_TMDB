@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Layout } from '../components/layout'
+import { Layout } from '@/components/layout'
 import styles from '../styles/404.module.css'
 
 const NotFoundPage = () => {

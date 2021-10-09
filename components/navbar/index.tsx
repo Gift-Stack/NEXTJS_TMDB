@@ -23,20 +23,21 @@ const Navbar = ({
                 src="/tmdb-short.svg"
                 alt="TMDB logo"
                 height="100%"
-                width={150}
+                width="100%"
+                className={styles.image}
               />
             </div>
             <ul>
               <li className={router.pathname === '/' ? styles.active : ''}>
                 <Link href="/">Movies</Link>
               </li>
-              <li
+              {/* <li
                 className={
                   router.pathname === '/favourites' ? styles.active : ''
                 }
               >
                 <Link href="/favorites">Favorites</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className={styles.flex}>

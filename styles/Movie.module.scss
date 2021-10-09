@@ -1,6 +1,12 @@
+.root {
+  position: relative;
+  width: 180px;
+  height: 300px;
+}
 .movie {
   border-radius: 10px;
   position: relative;
+  width: 180px;
 }
 .star {
   width: 25px;
@@ -14,4 +20,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .movie {
+    // width: 300px;
+    // flex-direction: column;
+  }
 }
