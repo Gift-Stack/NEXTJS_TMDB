@@ -12,7 +12,10 @@ yarn run dev
 
 ## Movie info application! Brought to you by TMDB!
 
-## Image
-<img width="960" alt="image" src="https://user-images.githubusercontent.com/72243506/136662160-21eb654f-c7ce-4d50-9a25-deaf3924d0cc.PNG">
+## Images
 
 ```
+![image](https://user-images.githubusercontent.com/72243506/136676879-c741498f-0349-4222-a3e3-81fc04d6e2fc.png)
+
+https://user-images.githubusercontent.com/72243506/136676666-79f3e04c-d488-4986-a7c1-3587d487ee2a.mp4
+
